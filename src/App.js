@@ -1,18 +1,17 @@
-import './App.css';
-import Ballot from './Components/Ballot/Ballot';
+import OutterContainer from './Containers'
+import GlobalStyle from './styles/index'
+import { ContextProvider } from './context'
+
 
 function App() {
   // Feel free to remove the contents of the header tag to make more room for your code
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={'https://www.dailypay.com/wp-content/uploads/DailyPay-Logo-White.svg'} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-      </header>
-      <Ballot />
-    </div>
+    <ContextProvider>
+      <div className="App">
+        <OutterContainer />
+        <GlobalStyle />
+      </div>
+    </ContextProvider>
   );
 }
 
